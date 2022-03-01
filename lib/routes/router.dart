@@ -1,8 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:routingweb/main.dart';
+import 'package:routingweb/screens/about/about_screen.dart';
 import 'package:routingweb/screens/dashboard/dashboard_screen.dart';
 import 'package:routingweb/screens/dashboard/products/add_products_screen.dart';
 import 'package:routingweb/screens/dashboard/products/product_screen.dart';
+import 'package:routingweb/screens/dashboard/profile/profile_screen.dart';
 
 @MaterialAutoRouter(
   routes: <AutoRoute>[
@@ -30,9 +32,11 @@ import 'package:routingweb/screens/dashboard/products/product_screen.dart';
                 name: 'AddProductsRoute',
                 path: 'add_products'),
           ]
-        )
+        ),
+        AutoRoute(page: ProfileScreen, name: 'ProfileRoute', path: 'profile')
       ]
-    )
+    ),
+    AutoRoute(page: AboutScreen, name: 'AboutRouter', path: '/about')
   ]
 )
 class $AppRouter {}
